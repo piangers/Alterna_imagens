@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/plugins/Alterna_imagens" >
+        <file>rup.png</file>
+        <file>rdown.png</file>
+    </qresource>
+</RCC>
