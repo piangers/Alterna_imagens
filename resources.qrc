@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/plugins/Alterna_imagens" >
-        <file>rumup.png</file>
-        <file>rumdown.png</file>
+        <file>runup.png</file>
+        <file>rundown.png</file>
     </qresource>
 </RCC>
