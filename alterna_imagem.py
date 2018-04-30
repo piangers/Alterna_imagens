@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
-from PyQt4.QtGui import QAction, QIcon
+from PyQt4.QtGui import QAction, QIcon,QMessageBox
 from qgis.core import QgsProject, QgsLayerTreeGroup, QgsMapLayer, QgsMapLayerRegistry
 import resources_rc
-from qgis.gui import QgsMessageBar
 import os.path
 
 class Alterna_imagem:
@@ -85,9 +83,9 @@ class Alterna_imagem:
                     lyr.setVisible(2)
             else:
                 
-                self.iface.messageBar().pushMessage(u'O Grupo deve conter pelo menos uma camada.', level=QgsMessageBar.INFO, duration=5)
+                QMessageBox.information (self.iface.mainWindow() ,  u'ATENÇÃO!' ,  u"O GRUPO NÃO POSSUE CAMADAS DO TIPO RASTER_LAYER!")
         else:
+            QMessageBox.warning (self.iface.mainWindow() ,  u'ATENÇÃO' ,  u"DEVE EXISTIR UM GRUPO COM O NOME: Imagens Dinamicas!")   
+
+         
             
-            self.iface.messageBar().pushMessage(u'Deve haver um GRUPO com o nome: Imagens Dinamicas.', level=QgsMessageBar.INFO, duration=5)
-
-
